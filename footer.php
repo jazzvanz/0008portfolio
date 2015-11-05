@@ -14,4 +14,10 @@
 
 <?php wp_footer(); ?>
 </body>
+
+<!-- credits: -->
+<!-- Headshot by Pam Lau, Photographer Toronto Canada -->
+<!-- Design psd by jdfjdfjdlsj -->
+
+
 </html>
