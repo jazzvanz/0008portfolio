@@ -4,9 +4,9 @@
 */
 get_header();  ?>
 
-<div class="section">
-  <div class="innerWrapper">
-    <div class="full">
+<div class="container">
+  <div class="outerWrapper">
+    <div class="innerWrapper">
 
 
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -38,12 +38,14 @@ get_header();  ?>
                    <!-- pulling in social icons -->
                    <?php while ( has_sub_field("social_icons") ): ?>
                      <div class="socialIcons">
-                       <p><?php the_sub_field("social_icons"); ?>
+                       <p><?php the_sub_field("social_icons"); ?></p>
                      </div>
                    <?php endwhile; ?>
 
                </div>
           </div>
+
+
 
 
               <!-- pulling in hours worked  -->
@@ -56,56 +58,48 @@ get_header();  ?>
                   <?php endwhile; ?>
               </div>
 
+
             <!-- pulling in mywork title -->
-            <h3 class="myWork"><?php the_field("my_work"); ?></h3>
-            <!-- pulling in the subtitle about my portfolio -->
-            <h5 class="subtitle"><?php the_field("subtitle_work"); ?></h5>
+            <div class="workText">
+                <h3 class="myWork"><?php the_field("my_work"); ?></h3>
+                <!-- pulling in the subtitle about my portfolio -->
+                <h5 class="subtitle"><?php the_field("subtitle_work"); ?></h5>
+            </div>
 
             <!-- //bring in portfolio wp_query.com -->
                   
-             <div class="section">
-               <div class="innerWrapper">
+             <div class="portfolio">
                    <div class="full"> 
 
-                       <?php
-   
-                        $portfolioQuery = new WP_Query ( 
+                       <?php $portfolioQuery = new WP_Query ( 
                         array (
                           'post_type' => 'portfolio'    
-
                            )
                          ); ?> 
 
-
-                       <?php if ( $portfolioQuery->have_posts() ): ?>
+                          <?php if ( $portfolioQuery->have_posts() ): ?>
 
                           <?php while ( $portfolioQuery->have_posts() ): $portfolioQuery->the_post(); ?>
-                          <!-- stuff that happens while inside the loop -->
 
+                          <!-- stuff that happens while inside the loop -->
                             <h3 class="portfolioTitle"><?php the_field("the_title"); ?></h3>
                             <p class="portfolioContent"><?php the_field("the_content"); ?></p>
 
                             <?php while ( has_sub_field("portfolio_pieces") ): ?>
-                              <div class="portfolioSub">
-                                <p><?php the_sub_field("long_desc"); ?></p>
-                                <div class="portfolioImg">
-                                    <?php  $portImage = get_sub_field('project_image');
-                                       if( !empty($portImage) ): ?>
-                                       <img class="projectImage" src="<?php echo $portImage['url']; ?>" alt="<?php echo $portImage['alt']; ?>" />
-                                     <?php endif; ?>  
-                                   <?php endwhile; ?>
-                                </div>
-                              </div>
+                            <p><?php the_sub_field("long_desc"); ?></p>
+                            <img class="projectImage" src="<?php the_sub_field("project_image"); ?>" />
+                    
+                            <?php endwhile; ?>
+                          
+                            <?php endwhile; ?>
 
-                          <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
 
-                             <?php wp_reset_postdata(); ?>
-
-                           <?php endif;  ?> 
+                            <?php endif;  ?> 
 
                      </div>
-                </div> <!-- /.innerWrapper -->
-           </div> <!-- /.section -->
+                </div> 
+         
 
 
 
