@@ -1,11 +1,7 @@
 
   <?php  
-
-  
-// Template Name: single-portfolio-Page
-
-  ?>
-
+/* Template Name: single-portfolio-Page */
+ ?>
 
 <div class="section">
   <div class="innerWrapper">
@@ -38,6 +34,7 @@
   </div> <!-- /.innerWrapper -->
 </div> <!-- /.section -->
 
+<!-- wp-query/ custom query notes. to get a post type, post whatever you called' -->
 
 
 
