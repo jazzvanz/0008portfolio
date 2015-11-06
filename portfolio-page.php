@@ -76,19 +76,21 @@ get_header();  ?>
                           'post_type' => 'portfolio'    
                            )
                          ); ?> 
-
+                         
                           <?php if ( $portfolioQuery->have_posts() ): ?>
 
                           <?php while ( $portfolioQuery->have_posts() ): $portfolioQuery->the_post(); ?>
 
                           <!-- stuff that happens while inside the loop -->
-                            <h3 class="portfolioTitle"><?php the_field("the_title"); ?></h3>
-                            <p class="portfolioContent"><?php the_field("the_content"); ?></p>
+                            <div class="test">
+                            <h3 class="portfolioTitle"><?php the_title(); ?></h3>
+                            <p class="portfolioContent"><?php the_content(); ?></p>
 
                             <?php while ( has_sub_field("portfolio_pieces") ): ?>
                             <p><?php the_sub_field("long_desc"); ?></p>
                             <img class="projectImage" src="<?php the_sub_field("project_image"); ?>" />
-                    
+                            </div>
+                            <!--  div test ends -->
                             <?php endwhile; ?>
                           
                             <?php endwhile; ?>
@@ -134,30 +136,41 @@ get_header();  ?>
                 </div>
               <?php endwhile; ?>
 
-              <!-- pulling in contact column one -->
-              <?php while ( has_sub_field("contact_information_one") ): ?>
-                <div class="contactColumnOne">
-                  <p><?php the_sub_field("contact_one"); ?></p>
-                </div>
-              <?php endwhile; ?>
-
-              <!-- pulling in contact column two -->
-              <?php while ( has_sub_field("contact_information_two") ): ?>
-                  <div class="contactColumnTwo">
-                    <p><?php the_sub_field("contact_column_two"); ?></p>
+            <div class="contactPanel">
+              <div class="columns">
+                  <!-- pulling in contact column one -->
+                  <div class="one">
+                  <?php while ( has_sub_field("contact_information_one") ): ?>
+                    <div class="contactColumnOne">
+                      <p><?php the_sub_field("contact_one"); ?></p>
+                    </div>
                   </div>
-               <?php endwhile; ?>
+                  <?php endwhile; ?>
 
-                <!-- pulling in contact column three -->
-              <?php while ( has_sub_field("contact_information_three") ): ?>
-                  <div class="contactColumnThree">
-                    <p><?php the_sub_field("contact_column_three_"); ?></p>
+                  <!-- pulling in contact column two -->
+                  <div class="two">
+                  <?php while ( has_sub_field("contact_information_two") ): ?>
+                      <div class="contactColumnTwo">
+                        <p><?php the_sub_field("contact_column_two"); ?></p>
+                      </div>
                   </div>
-              <?php endwhile; ?>
+                   <?php endwhile; ?>
 
-                <!-- pulling in the contact forum -->
-                <?php the_field("contact_form_"); ?>
-
+                    <!-- pulling in contact column three -->
+                  <div class="three">
+                      <?php while ( has_sub_field("contact_information_three") ): ?>
+                          <div class="contactColumnThree">
+                            <p><?php the_sub_field("contact_column_three_"); ?></p>
+                          </div>
+                      <?php endwhile; ?>
+                    </div>
+                  </div> 
+                  <!-- columns div ends -->
+                    <!-- pulling in the contact forum -->
+                  <div class="contactForm">
+                    <?php the_field("contact_form_"); ?>
+                  </div>
+             </div>
 
          <?php endwhile; // end of the loop. ?>
 

@@ -154,14 +154,67 @@ header {
 	margin:0 auto;
 		.full {
 			background:palegoldenrod;
+				.test {
+					background:cadetblue;
+					margin:blue;
+
+				}
 				img {
-					background:pink;
-					max-width:200px;
+					// background:pink;
+					max-width:300px;
 					}
 				}	
 			}
-		
 
+// CSS FOR CONTACT SECTION
+
+.contactPanel {
+	background:pink;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+}
+
+.contactForm {
+	background:cadetblue;
+	display:flex;
+	flex-wrap:wrap;
+	align-items: center;
+	justify-content: center;
+}
+.columns {
+	background:palegreen;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
+}
+
+.contactColumnOne {
+	background:blue;
+	max-width:100px;
+}
+
+.contactColumnTwo {
+	background:blue;
+	max-width:33.33%;
+}
+// 
+// actaul contact form  
+.wpcf7 {
+	background:turquoise;
+	width:100%;
+	color:white;
+	font-family: 'Montserrat', sans-serif;
+	margin:0 auto;
+
+	// background:none;
+		.wpcf7-form-control {
+			width:80%;
+			background:none;
+			border:none;
+			border-bottom:2px solid grey;
+		}
+}
 
 
 
