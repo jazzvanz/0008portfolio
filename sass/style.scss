@@ -176,11 +176,12 @@ header {
 }
 
 .contactForm {
-	background:cadetblue;
+	// background:cadetblue;
 	display:flex;
 	flex-wrap:wrap;
 	align-items: center;
 	justify-content: center;
+	margin:0 auto;
 }
 .columns {
 	background:palegreen;
@@ -201,18 +202,64 @@ header {
 // 
 // actaul contact form  
 .wpcf7 {
-	background:turquoise;
-	width:100%;
-	color:white;
+	// background:turquoise;
+	width:80%;
+	color:pink;
 	font-family: 'Montserrat', sans-serif;
 	margin:0 auto;
+	text-transform: uppercase;
+	// display:flex;
+	// flex-wrap:wrap;
+	// align-items: center;
+	// justify-content: center;
 
 	// background:none;
 		.wpcf7-form-control {
-			width:80%;
+			width:100%;
 			background:none;
 			border:none;
-			border-bottom:2px solid grey;
+			border-bottom:1px solid grey;
+		}
+
+		.wpcf7-submit {
+			width:20%;
+			border: 2px solid pink;
+			text-transform: uppercase;
+			color:pink;
+			float: right;
+			padding:10px;
+			border-radius: 9px;
+			margin:40px auto;
+			// text-align: center;
+			// padding:20px;
+		}
+		.wpcf7-text {
+			padding:10px;
+		}
+		.wpcf7-textarea{
+			padding:10px;
+			height:40px;
+		}
+		.wpcf7-submit:hover {
+			background:grey;
+			border:2px solid white;
+			// padding:10px;
+
+		}
+
+}
+
+//CSS FOR COPYRIGHT 
+.copy {
+	color:pink;
+	font-family: 'Montserrat', sans-serif;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: flex-end;
+	width:90%;
+		p {
+			// text-transform: uppercase;
+			margin-top:60px;
 		}
 }
 
