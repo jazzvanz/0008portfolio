@@ -28,6 +28,9 @@ get_header();  ?>
 
                     <!-- panel/broad skills section  -->
                     <!-- pulling in skills/repeater -->
+
+                    <!-- hardcoding the broad logos -->
+
                    <?php while ( has_sub_field("broad_skills") ): ?>
                      <div>
                        <p><?php the_sub_field("broad_logo"); ?></p>
@@ -111,69 +114,84 @@ get_header();  ?>
                   <p><?php the_sub_field("hardskills_icons"); ?></p>
                 </div>
              <?php endwhile; ?>
+          </div>   
 
             <!-- hardcoding upcoming title  -->
-            <h3>Upcoming Events</h3>
+          <!-- start of events  -->
+       <div class="containCalender">
+         <div class="container">
+          <div class="calender">
+            <div class="upcoming">
+                <h3>Upcoming Events</h3>
 
-             <!-- pulling in upcoming events -->
-             <?php while ( has_sub_field("upcoming_events") ): ?>
-                <div class="upcoming">
-                  <p><?php the_sub_field("event_name"); ?></p>
-                  <p><?php the_sub_field("event_date"); ?></p>
-                  <p><?php the_sub_field("event_description_"); ?></p>
+                 <!-- pulling in upcoming events -->
+                 <?php while ( has_sub_field("upcoming_events") ): ?>
+                      <p class="eventName"><?php the_sub_field("event_name"); ?></p>
+                      <p class="eventDate"><?php the_sub_field("event_date"); ?></p>
+                      <p class="eventDesc"><?php the_sub_field("event_description_"); ?></p>
+                  <?php endwhile; ?>
                 </div>
-              <?php endwhile; ?>
 
-
-              <!-- hardcoding past event titles -->
-              <h3>Recent Past Events</h3>
-              <!-- pulling in past events -->
-            <?php while ( has_sub_field("past_events") ): ?>
+                <!-- hardcoding past event titles -->
                 <div class="past">
-                  <p><?php the_sub_field("past_title"); ?></p>
-                  <p><?php the_sub_field("past_date"); ?></p>
-                  <p><?php the_sub_field("past_description"); ?></p>
+                <h3>Recent Past Events</h3>
+                <!-- pulling in past events -->
+              <?php while ( has_sub_field("past_events") ): ?>
+                    <p class="eventName"><?php the_sub_field("past_title"); ?></p>
+                    <p class="eventDate"><?php the_sub_field("past_date"); ?></p>
+                    <p class="eventDesc"><?php the_sub_field("past_description"); ?></p>
+                <?php endwhile; ?>
                 </div>
-              <?php endwhile; ?>
-
+            </div>
+           </div>
+            <!-- </div> -->
+          </div>
+            <!-- //end of calender div -->
+          <div class="container">
             <div class="contactPanel">
               <div class="columns">
                   <!-- pulling in contact column one -->
                   <div class="one">
-                  <?php while ( has_sub_field("contact_information_one") ): ?>
-                    <div class="contactColumnOne">
-                      <p><?php the_sub_field("contact_one"); ?></p>
-                    </div>
-                  </div>
+                      <?php while ( has_sub_field("contact_information_one") ): ?>
+                    <!-- <div class="contactColumnOne"> -->
+                       <p><?php the_sub_field("contact_one"); ?></p>
+                    <!-- </div> -->
+                  <!-- </div> -->
                   <?php endwhile; ?>
+                  </div>
 
                   <!-- pulling in contact column two -->
                   <div class="two">
                   <?php while ( has_sub_field("contact_information_two") ): ?>
-                      <div class="contactColumnTwo">
+                      <!-- <div class="contactColumnTwo"> -->
                         <p><?php the_sub_field("contact_column_two"); ?></p>
-                      </div>
-                  </div>
+                      <!-- </div> -->
+                  <!-- </div> -->
                    <?php endwhile; ?>
+                   </div>
 
                     <!-- pulling in contact column three -->
                   <div class="three">
                       <?php while ( has_sub_field("contact_information_three") ): ?>
-                          <div class="contactColumnThree">
                             <p><?php the_sub_field("contact_column_three_"); ?></p>
-                          </div>
                       <?php endwhile; ?>
-                    </div>
+                  </div>
+
                   </div> 
-                  <!-- columns div ends -->
+           <!-- columns div ends -->
+                  
                     <!-- pulling in the contact forum -->
                   <div class="contactForm">
                     <?php the_field("contact_form_"); ?>
                   </div>
-             </div>
-
+                </div> 
+                       <!-- columns div ends -->
+               </div>
+                 
          <?php endwhile; // end of the loop. ?>
 
+              
+        </div>
       
     </div>
   </div> <!-- /.innerWrapper -->

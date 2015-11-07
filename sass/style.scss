@@ -166,54 +166,172 @@ header {
 				}	
 			}
 
-// CSS FOR CONTACT SECTION
+// CSS CALENDER/EVENTS
 
-.contactPanel {
+// upcoming events CSS
+.containCalender {
 	background:pink;
+	width:100%;
+	// padding:30px;
+}
+.calender {
+	// background:plum;
 	display:flex;
 	flex-wrap:wrap;
-	flex-direction:column;
+	justify-content: space-between;
+	width:80%;
+	margin: 100px auto;
+
+		.upcoming {
+			margin:0;
+			padding:0;
+			border:2px solid grey;
+			border-radius: 10px;
+			text-align: center;
+			width:45%;
+			padding:4%;
+			background:white;
+
+		}
+			h3 {
+				font-size: 1.5rem;
+				padding:0;
+				width:80%;
+				margin:8% auto;
+				margin-top:0;
+				
+			}
+			p {
+				margin:0;
+				padding:0;
+				
+			}
+			.eventName {
+				font-style: bold;
+				font-weight: 600;
+				font-size: 1.2rem;
+				color:pink;
+				margin-top:4%;
+			}
+			.eventDate {
+				font-style: italic;
+				margin-bottom:.5rem;
+
+			}
+			.eventDesc {
+				margin-bottom: 2rem;
+				width:80%;
+				margin:0 auto;
+			}
+
+ // RECENTLY PASSED CSS
+
+		.past {
+			margin:0;
+			padding:0;
+			border:2px solid grey;
+			border-radius: 10px;
+			text-align: center;
+			width:45%;
+			padding:4%;
+			background:white;
+
+				h3 {
+				font-size: 1.5rem;
+				padding:0;
+				width:80%;
+				margin:8% auto;
+				margin-top:0;
+				}
+
+				p {
+					margin:0;
+					padding:0;
+				}
+				 .eventName {
+					font-style: bold;
+					font-weight: 600;
+					font-size: 1.2rem;
+					color:pink;
+					margin-top:4%;
+				}
+				.eventDate {
+					font-style: italic;
+					margin-bottom:.5rem;
+
+				}
+				.eventDesc {
+					margin-bottom: 2rem;
+					width:80%;
+					margin:0 auto;
+				}
+				
+		}
+}
+
+
+
+
+// CSS FOR CONTACT SECTION
+
+.columns {
+	// background: hotpink;
+	width:80%;
+	margin: 0 auto;
+	display:flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	font-family: 'Montserrat', sans-serif;
+	margin-top: 40px;
+	font-size: 1rem;
+	color:grey;
+	
+		.one {
+			// background:palegreen;
+			max-width:33.33%;
+				p {
+					margin:0;
+					padding:0;
+				}
+		}
+		.two {
+			// background:lightsalmon;
+			max-width:33.33%;
+				p {
+					margin:0;
+					padding:0;
+				}
+		}
+		.three {
+			// background:burlywood;
+			max-width:33.33%;
+				p {
+					margin:0;
+					padding:0;
+				}
+		}
+
 }
 
 .contactForm {
 	// background:cadetblue;
-	display:flex;
+	display:flex; 
 	flex-wrap:wrap;
 	align-items: center;
 	justify-content: center;
 	margin:0 auto;
-}
-.columns {
-	background:palegreen;
-	display:flex;
-	flex-wrap:wrap;
-	justify-content: space-around;
+	// background: hotpink;
 }
 
-.contactColumnOne {
-	background:blue;
-	max-width:100px;
-}
-
-.contactColumnTwo {
-	background:blue;
-	max-width:33.33%;
-}
-// 
 // actaul contact form  
 .wpcf7 {
-	// background:turquoise;
 	width:80%;
 	color:pink;
 	font-family: 'Montserrat', sans-serif;
 	margin:0 auto;
 	text-transform: uppercase;
-	// display:flex;
-	// flex-wrap:wrap;
-	// align-items: center;
-	// justify-content: center;
-
-	// background:none;
+	font-size: 1.3rem;
+	
 		.wpcf7-form-control {
 			width:100%;
 			background:none;
@@ -262,6 +380,8 @@ header {
 			margin-top:60px;
 		}
 }
+
+//
 
 
 
