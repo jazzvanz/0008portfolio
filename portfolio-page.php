@@ -12,10 +12,12 @@ get_header();  ?>
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
             <!-- pulling in headshot -->
           <div class="splash">
+            <div class="img">
               <?php  $image = get_field('headshot');
                   if( !empty($image) ): ?>
                  <img class="headshot" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                <?php endif; ?>
+            </div>
                <!-- pulling in job title -->
                <div class="textBlock">
                    <h2 class="jobTitle"><?php the_field("job_title"); ?></h2>
@@ -29,27 +31,33 @@ get_header();  ?>
                     <!-- panel/broad skills section  -->
                     <!-- pulling in skills/repeater -->
 
-                    <!-- hardcoding the broad logos -->
-
-                   <?php while ( has_sub_field("broad_skills") ): ?>
-                     <div>
-                       <p><?php the_sub_field("broad_logo"); ?></p>
-                       <p><?php the_sub_field("broad_title"); ?></p>
-                     </div>
-                   <?php endwhile; ?>
-
+                    <div class="broadSkills">
+                      <div class="broadSvg">
+                        <!-- hardcoding the broad logos -->
+                        <div class="developer">
+                            <img class="svg" src="<?php bloginfo('template_url') ?>/images/developer.svg" alt="logo - geodesic dog">
+                             <h4>Developer</h4>
+                        </div>
+                        <div class="designer">
+                            <img class="svg" src="<?php bloginfo('template_url') ?>/images/design.svg" alt="logo - geodesic dog">
+                             <h4>Designer
+                         </div>
+                         <div class="person">
+                            <img class="svg" src="<?php bloginfo('template_url') ?>/images/peopleperson.svg" alt="logo - geodesic dog">
+                            <h4>People Person</h4>
+                         </div>
+                      </div> 
+                        <!-- hardcoding the broad titles -->
+                      
+                    </div>
                    <!-- pulling in social icons -->
+                <div class="socialIcons">
                    <?php while ( has_sub_field("social_icons") ): ?>
-                     <div class="socialIcons">
                        <p><?php the_sub_field("social_icons"); ?></p>
-                     </div>
                    <?php endwhile; ?>
-
-               </div>
+                </div>
+              </div>
           </div>
-
-
-
 
               <!-- pulling in hours worked  -->
               <div class="hoursPanel">

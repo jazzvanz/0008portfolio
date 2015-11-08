@@ -62,43 +62,122 @@ header {
 
 // CSS FOR SPLASH TOP PAGE
 .splash {
-	background:palegreen;
+	
 	max-width:1400px;
-	// width:100%;
+	
 	height:100vh;
 	display:flex;
 	flex-wrap:wrap;
 	margin:0 auto;
-	flex-direction: column;
-		.headshot {
-			border-radius: 50%;
-			max-width: 400px;
-			max-height: 400px;
-			margin: 30px;
-			width:50%;
-		}
-		.textBlock {
-			margin:auto auto;
-			background:grey;
+		.img {
 			display:flex;
 			flex-wrap:wrap;
+			justify-content: center;
+			align-items: center;
+					.headshot {
+						border-radius: 50%;
+						max-width: 400px;
+						max-height: 400px;
+						margin: 30px;
+					}
+				}
+		
+		.textBlock {
+			margin:auto auto;
+			display:flex;
+			flex-wrap:wrap;
+			flex-direction: column;
 			width:50%;
 
 				.introduction {
 					width:100%;
-					background:pink;
+					// background:pink;
+					margin:0;
+					padding:0;
+					line-height: 1.7rem;
+					width:90%;
 				}
 				.jobTitle {
-					background:cadetblue;
+					// background:cadetblue;
+					font-size: 1.3rem;
+					font-style: italic;
+					color:lightgrey;
+					margin:0;
+
 				}
 				.name {
-					background:green;
+					// background:green;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 2rem;
+					text-transform: uppercase;
+					margin:0;
 				}
 				.hi {
-					background:red;
+					// background:red;
+					font-family: 'Montserrat', sans-serif;
+					margin-top: 10px;
 		}
 	}
 }
+
+// CSS FOR THE BROAD SKILLS SECTION
+.broadSkills {
+	margin-top: 60px;
+	// background:plum;
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction: column;
+	width: 80%;
+
+
+		.broadSvg {
+			display:flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			width:90%;
+				h4 {
+					margin-top:0;
+					font-size: 1rem;
+					font-family: 'Montserrat', sans-serif;
+					text-align: center;
+		}
+	}	
+}
+
+.person {
+	text-align:center;
+}
+
+.developer .svg {
+	width:99%;
+}
+
+
+.svg {
+	height:100px;
+	margin: 0 auto;
+}
+
+// CSS for SOCIAL ICONS 
+.socialIcons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width:30%;
+		a {
+			font-size: 2rem;
+			color:black;
+			margin:0;
+			padding:0;
+		}
+		a:hover {
+			color:pink;
+		}
+}
+
+
+
+
 // CSS FOR PANELS OF HOURS WORK OR DESIGN EXPERIENCE 
 .hoursPanel {
 	background:grey;
@@ -382,6 +461,8 @@ header {
 }
 
 //
+
+
 
 
 
