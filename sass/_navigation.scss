@@ -1,14 +1,28 @@
 ul.menu {
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	// justify-content: flex-end;
+	// width: 50%;
+	justify-content: space-between;
+
 	li {
 		display: inline;
 		margin-right: 10px;
+		background:none;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
 		a {
 			color: #333;
 			padding: 10px;
 			background: #333;
-			color: white;
+			color: black;
+			background:none;
+			font-size:1.2rem;
+		}
+		a:hover {
+			color:pink;
 		}
 	}
 }

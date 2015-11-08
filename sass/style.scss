@@ -56,7 +56,11 @@ body {
 //Header Styles:
 
 header {
-	background-color:pink;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	padding:12px;
+	align-items: flex-end;
 }
 
 
@@ -64,7 +68,6 @@ header {
 .splash {
 	
 	max-width:1400px;
-	
 	height:100vh;
 	display:flex;
 	flex-wrap:wrap;
@@ -76,8 +79,8 @@ header {
 			align-items: center;
 					.headshot {
 						border-radius: 50%;
-						max-width: 400px;
-						max-height: 400px;
+						max-width: 500px;
+						max-height: 500px;
 						margin: 30px;
 					}
 				}
@@ -162,8 +165,8 @@ header {
 .socialIcons {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
-	width:30%;
+	justify-content: space-between;
+	width:40%;
 		a {
 			font-size: 2rem;
 			color:black;
@@ -179,25 +182,69 @@ header {
 
 
 // CSS FOR PANELS OF HOURS WORK OR DESIGN EXPERIENCE 
+
+h3.hoursCoded {
+	text-align: left;
+	width:100%;
+	color:black;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	color:black;
+	margin:0;
+	padding:30px;
+	text-transform: uppercase;
+		}
+
 .hoursPanel {
-	background:grey;
+	background:pink;
 	max-width:100%;
 	display:flex;
 	flex-wrap:wrap;
-	justify-content: space-between;
+	margin-bottom: 80px;
+	// justify-content: space-between;
+	// margin-bottom:100px;
 
+		.hoursP {
+			// background:blue;
+			width:1200px;
+			display:flex;
+			flex-wrap:wrap;
+			justify-content: space-between;
+			padding: 30px 0;
+		}
+
+	
 		.workHours {
-			background:pink;
-			margin:20px;
+			background:white;
+			// margin:20px;
 			border-radius: 50%;
-			width:50px;
-			height:50px;
-			border:2px black;
+			width:180px;
+			height:180px;
+			border:6px black solid;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+
 				.skill {
-					background:palegreen;
+					color:black;
+					text-align: center;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1.3rem;
+					line-height: 1.6rem;
+					margin:0;
+					padding:0;
+					text-transform: uppercase;
 				}
 				.hours {
-					background:cadetblue;
+					color:black;
+					text-align: center;
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1.2rem;
+					padding-top:5px;
+					margin:0;
 				}
 		}
 }
@@ -205,45 +252,105 @@ header {
 
 // CSS FOR TEXTBLOCK BEFORE PROFOLIO WORK
 .workText{
-	background:blue;
+	// background:blue;
 	display:flex;
 	flex-wrap:wrap;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 50px;
+
 
 	.myWork {
+		font-family: 'Montserrat', sans-serif;
 		font-size: 2rem;
-		color:white;
+		color:black;
 		margin:0;
 		padding:0;
+		text-transform: uppercase;
 	}
 	.subtitle {
-		color:white;
+		color:black;
 		margin:0;
 		padding:0;
 		font-size:1rem;
+		font-style: italic;
 	}
 }
 
 // CSS FOR PORTFOLIO SECIION
 .portfolio{
 	max-width:80%;
-	background:palegreen;
+	// background:palegreen;
 	margin:0 auto;
 		.full {
-			background:palegoldenrod;
+			// background:palegoldenrod;
 				.test {
-					background:cadetblue;
-					margin:blue;
+					display:flex;
+					// flex-wrap: wrap;
+					// background:cadetblue;
+					// flex-direction: column;
+					margin-bottom: 60px;
 
 				}
 				img {
-					// background:pink;
-					max-width:300px;
+					width:100%;
+					// max-width:450px;
+					max-height: 300px;
+					}
+
+					.textWork {
+						text-align: left;
+						color:black;
+						width:100%;
+						margin-right:30px;
+						margin-left: 30px;
+							h3 {
+								text-align: left;
+							}
 					}
 				}	
 			}
+
+// CSS FOR NTH CHILD ON PORTFOLIO	
+div.test:nth-child(2n+0) {
+	// background:yellow;
+	flex-direction: row-reverse;
+		.textWork {
+			margin-right: 0;
+		}
+
+}
+
+div.test:nth-child(odd) {
+	// background:yellow;
+	// flex-direction: row-reverse;
+		.textWork {
+			margin-left: 0;
+		}
+
+}
+
+// element:nth-child(an + b) { style properties }
+
+
+// HARD SKILLS HARD SKILLS 
+.hardSkills, .hardSkillsTwo {
+	// background: palegreen;
+	width:80%;
+	margin:0 auto;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 50px;
+	// height: 200px;
+		.devicons {
+			color: grey;
+			font-size: 6rem;
+		}
+}
+
+
 
 // CSS CALENDER/EVENTS
 

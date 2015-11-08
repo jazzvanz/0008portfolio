@@ -5,10 +5,7 @@
 get_header();  ?>
 
 <div class="container">
-  <div class="outerWrapper">
-    <div class="innerWrapper">
-
-
+  
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
             <!-- pulling in headshot -->
           <div class="splash">
@@ -60,14 +57,21 @@ get_header();  ?>
           </div>
 
               <!-- pulling in hours worked  -->
+          <h3 class="hoursCoded">Time spent coding:</h3>
+          </div>
               <div class="hoursPanel">
+               <div class="container">
+                  <div class="hoursP">
                   <?php while ( has_sub_field("work_hours") ): ?>
                     <div class="workHours">
                       <p class="skill"><?php the_sub_field("skill"); ?></p>
                       <p class="hours"><?php the_sub_field("hours"); ?></p>
                     </div> 
                   <?php endwhile; ?>
-              </div>
+                  </div>
+                </div>
+             </div>
+          <div class="container">
 
 
             <!-- pulling in mywork title -->
@@ -93,14 +97,18 @@ get_header();  ?>
                           <?php while ( $portfolioQuery->have_posts() ): $portfolioQuery->the_post(); ?>
 
                           <!-- stuff that happens while inside the loop -->
-                            <div class="test">
-                            <h3 class="portfolioTitle"><?php the_title(); ?></h3>
-                            <p class="portfolioContent"><?php the_content(); ?></p>
+                        <div class="test">
+                          <div class="textWork">
+                              <h3 class="portfolioTitle"><?php the_title(); ?></h3>
+                              <p class="portfolioContent"><?php the_content(); ?></p>
 
-                            <?php while ( has_sub_field("portfolio_pieces") ): ?>
-                            <p><?php the_sub_field("long_desc"); ?></p>
-                            <img class="projectImage" src="<?php the_sub_field("project_image"); ?>" />
+                              <?php while ( has_sub_field("portfolio_pieces") ): ?>
+                              <p><?php the_sub_field("long_desc"); ?></p>
+                          </div>
+                            <div class="work">
+                               <img class="projectImage" src="<?php the_sub_field("project_image"); ?>" />
                             </div>
+                         </div>
                             <!--  div test ends -->
                             <?php endwhile; ?>
                           
@@ -117,12 +125,19 @@ get_header();  ?>
 
 
              <!-- pulling in my hardskills  -->
-            <?php while ( has_sub_field("hard_skills") ): ?>
-                <div class="hardSkills">
-                  <p><?php the_sub_field("hardskills_icons"); ?></p>
-                </div>
-             <?php endwhile; ?>
-          </div>   
+         
+        <div class="hardSkills">
+          <?php while(has_sub_field("hard_skills")): ?>
+               <i class="devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
+          <?php endwhile; ?>
+        </div>
+
+         <div class="hardSkillsTwo">
+          <?php while(has_sub_field("hard_skills_two")): ?>
+               <i class="devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
+          <?php endwhile; ?>
+        </div>
+
 
             <!-- hardcoding upcoming title  -->
           <!-- start of events  -->
@@ -194,16 +209,12 @@ get_header();  ?>
                   </div>
                 </div> 
                        <!-- columns div ends -->
-               </div>
+            </div>
                  
          <?php endwhile; // end of the loop. ?>
 
               
-        </div>
-      
-    </div>
-  </div> <!-- /.innerWrapper -->
-</div> <!-- /.section -->
+  </div> <!-- /.container -->
 
 
 <?php get_footer(); ?>
