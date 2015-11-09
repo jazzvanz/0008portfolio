@@ -8,7 +8,7 @@ get_header();  ?>
   
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
             <!-- pulling in headshot -->
-          <div class="splash">
+          <div id="about" class="splash">
             <div class="img">
               <?php  $image = get_field('headshot');
                   if( !empty($image) ): ?>
@@ -71,11 +71,11 @@ get_header();  ?>
                   </div>
                 </div>
              </div>
-          <div class="container">
+         <div class="container">
 
 
             <!-- pulling in mywork title -->
-            <div class="workText">
+            <div id="portfolio" class="workText">
                 <h3 class="myWork"><?php the_field("my_work"); ?></h3>
                 <!-- pulling in the subtitle about my portfolio -->
                 <h5 class="subtitle"><?php the_field("subtitle_work"); ?></h5>
@@ -100,10 +100,12 @@ get_header();  ?>
                         <div class="test">
                           <div class="textWork">
                               <h3 class="portfolioTitle"><?php the_title(); ?></h3>
-                              <p class="portfolioContent"><?php the_content(); ?></p>
+                              <h4><?php the_content(); ?></h4>
 
                               <?php while ( has_sub_field("portfolio_pieces") ): ?>
                               <p><?php the_sub_field("long_desc"); ?></p>
+                              <?php the_sub_field("button"); ?>
+                        
                           </div>
                             <div class="work">
                                <img class="projectImage" src="<?php the_sub_field("project_image"); ?>" />
@@ -125,8 +127,10 @@ get_header();  ?>
 
 
              <!-- pulling in my hardskills  -->
-         
-        <div class="hardSkills">
+         <h3 class="hard">Skills &amp; Languages</h3>
+         <h5 class="hardSubtitle">Current + <span>In Process</span></h5>
+
+        <div id="skills" class="hardSkills">
           <?php while(has_sub_field("hard_skills")): ?>
                <i class="devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
           <?php endwhile; ?>
@@ -137,31 +141,35 @@ get_header();  ?>
                <i class="devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
           <?php endwhile; ?>
         </div>
-
+      </div>
+    </div>
 
             <!-- hardcoding upcoming title  -->
           <!-- start of events  -->
+      <h3 id="events" class="calenderP">Events</h3> 
        <div class="containCalender">
          <div class="container">
           <div class="calender">
             <div class="upcoming">
-                <h3>Upcoming Events</h3>
+                <h3>Upcoming</h3>
 
                  <!-- pulling in upcoming events -->
                  <?php while ( has_sub_field("upcoming_events") ): ?>
+                       <p class="eventDate"><?php the_sub_field("event_date"); ?></p>
                       <p class="eventName"><?php the_sub_field("event_name"); ?></p>
-                      <p class="eventDate"><?php the_sub_field("event_date"); ?></p>
+                      <!-- <p class="eventDate"><?php the_sub_field("event_date"); ?></p> -->
                       <p class="eventDesc"><?php the_sub_field("event_description_"); ?></p>
                   <?php endwhile; ?>
                 </div>
 
                 <!-- hardcoding past event titles -->
                 <div class="past">
-                <h3>Recent Past Events</h3>
+                <h3>Recently Past </h3>
                 <!-- pulling in past events -->
               <?php while ( has_sub_field("past_events") ): ?>
+                 <p class="eventDate"><?php the_sub_field("past_date"); ?></p>
                     <p class="eventName"><?php the_sub_field("past_title"); ?></p>
-                    <p class="eventDate"><?php the_sub_field("past_date"); ?></p>
+                    <!-- <p class="eventDate"><?php the_sub_field("past_date"); ?></p> -->
                     <p class="eventDesc"><?php the_sub_field("past_description"); ?></p>
                 <?php endwhile; ?>
                 </div>
@@ -169,7 +177,12 @@ get_header();  ?>
            </div>
             <!-- </div> -->
           </div>
+
             <!-- //end of calender div -->
+
+
+         <h3 id="contact" class="connect">Let's Connect!</h3>
+
           <div class="container">
             <div class="contactPanel">
               <div class="columns">
@@ -204,6 +217,7 @@ get_header();  ?>
            <!-- columns div ends -->
                   
                     <!-- pulling in the contact forum -->
+
                   <div class="contactForm">
                     <?php the_field("contact_form_"); ?>
                   </div>

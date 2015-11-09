@@ -22,11 +22,13 @@
 <header>
   <div class="container">
    
-
-    <?php wp_nav_menu( array(
+   <div class="nav">
+     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'
     )); ?>
+
+   </div>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

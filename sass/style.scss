@@ -56,12 +56,42 @@ body {
 //Header Styles:
 
 header {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	padding:12px;
-	align-items: flex-end;
-}
+	// display: flex;
+	// flex-wrap: wrap;
+	// justify-content: flex-end;
+	// padding:12px;
+	// align-items: flex-end;
+	
+		.nav {
+			color:white;
+ 			width:300px;
+ 			height:300px;
+			// position:absolute;
+			position:fixed;
+			top:0;
+			left:0;
+ 			// -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+			// clip-path: polygon(0 0, 100% 0, 0 100%);
+			
+			* {
+				position: relative;
+				z-index: 80;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				z-index: 50;
+				display: block;
+				width: 189%;
+				height: 189%;
+				background: black;
+				transform: rotate(-50deg);
+				top: -100%;
+				left: -120%;
+			}
+		}
+	}
 
 
 // CSS FOR SPLASH TOP PAGE
@@ -273,7 +303,9 @@ h3.hoursCoded {
 		color:black;
 		margin:0;
 		padding:0;
-		font-size:1rem;
+		padding-top:7px;
+		padding-bottom:15px;
+		font-size:1.2rem;
 		font-style: italic;
 	}
 }
@@ -281,36 +313,77 @@ h3.hoursCoded {
 // CSS FOR PORTFOLIO SECIION
 .portfolio{
 	max-width:80%;
-	// background:palegreen;
 	margin:0 auto;
 		.full {
-			// background:palegoldenrod;
+			
 				.test {
 					display:flex;
-					// flex-wrap: wrap;
-					// background:cadetblue;
-					// flex-direction: column;
-					margin-bottom: 60px;
+					margin-bottom: 90px;
 
 				}
 				img {
 					width:100%;
-					// max-width:450px;
 					max-height: 300px;
 					}
 
-					.textWork {
-						text-align: left;
-						color:black;
-						width:100%;
-						margin-right:30px;
-						margin-left: 30px;
-							h3 {
-								text-align: left;
+				.textWork {
+					text-align: left;
+					color:black;
+					width:100%;
+					margin-right:30px;
+					margin-left: 30px;
+
+					h3 {
+					text-align: left;
+					font-family: 'Montserrat', sans-serif;
+					margin:0; 
+					padding:0;
+					color:black;
+					font-size:1.6rem;
+						}
+
+					h4 {
+						color:grey;
+						text-transform: uppercase;
+						letter-spacing: .1rem; 
+						font-size: .8rem;
+						padding:0;
+						margin:0;
+							span {
+								color:pink;
 							}
+						}
+						p {
+							color: black;
+							line-height: 1.7rem;
+						}
 					}
-				}	
-			}
+
+						button {
+							background:white;
+							color:pink;
+							border: 2px solid pink;
+							width:32%;
+							padding:10px;
+							border-radius: 9px;
+							font-family: 'Montserrat', sans-serif;
+							float:right;
+							text-align: center;
+								a {
+									text-align: center;
+									color:pink;
+									clear:both;
+								}
+							}
+								button:hover{
+									background:grey;
+									border:2px solid white;
+							}
+						
+						
+					}
+				}
+
 
 // CSS FOR NTH CHILD ON PORTFOLIO	
 div.test:nth-child(2n+0) {
@@ -335,6 +408,33 @@ div.test:nth-child(odd) {
 
 
 // HARD SKILLS HARD SKILLS 
+
+h3.hard {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 2rem;
+		color:black;
+		margin:0;
+		padding:0;
+		text-transform: uppercase;
+		text-align: center;
+}
+
+h5.hardSubtitle {
+	color:black;
+	margin:0;
+	padding:0;
+	padding-top:7px;
+	padding-bottom:15px;
+	font-size:1.2rem;
+	font-style: italic;
+	text-align: center;
+		span {
+			color:pink;
+		}
+}
+
+
+
 .hardSkills, .hardSkillsTwo {
 	// background: palegreen;
 	width:80%;
@@ -345,11 +445,17 @@ div.test:nth-child(odd) {
 	margin-top: 50px;
 	// height: 200px;
 		.devicons {
-			color: grey;
+			color: black;
 			font-size: 6rem;
 		}
-}
 
+		.devicons-nodejs_small { 
+			color:pink;
+		}
+		.devicons-angular {
+			color:pink;
+		}
+}
 
 
 // CSS CALENDER/EVENTS
@@ -358,7 +464,11 @@ div.test:nth-child(odd) {
 .containCalender {
 	background:pink;
 	width:100%;
+	// margin-top: 100px;
+	padding-top:10px;
+	padding-bottom:10px;
 	// padding:30px;
+	// margin-bottom:40px;
 }
 .calender {
 	// background:plum;
@@ -366,25 +476,28 @@ div.test:nth-child(odd) {
 	flex-wrap:wrap;
 	justify-content: space-between;
 	width:80%;
-	margin: 100px auto;
+	margin: 50px auto;
 
 		.upcoming {
 			margin:0;
 			padding:0;
-			border:2px solid grey;
+			border:3px solid black;
 			border-radius: 10px;
-			text-align: center;
+			// text-align: center;
 			width:45%;
 			padding:4%;
 			background:white;
 
 		}
 			h3 {
-				font-size: 1.5rem;
+				font-size: 2rem;
 				padding:0;
 				width:80%;
 				margin:8% auto;
 				margin-top:0;
+				text-align: center;
+				color:black;
+				// -webkit-text-stroke: .1px grey;
 				
 			}
 			p {
@@ -396,18 +509,20 @@ div.test:nth-child(odd) {
 				font-style: bold;
 				font-weight: 600;
 				font-size: 1.2rem;
-				color:pink;
-				margin-top:4%;
+				color:black;
+				font-family: 'Montserrat', sans-serif;
+				margin-bottom:3px;
 			}
 			.eventDate {
 				font-style: italic;
-				margin-bottom:.5rem;
+				color:pink;
+				margin-top: 30px;
 
 			}
 			.eventDesc {
-				margin-bottom: 2rem;
-				width:80%;
-				margin:0 auto;
+				// margin-top: 30px;
+				// width:80%;
+				// margin:0 auto;
 			}
 
  // RECENTLY PASSED CSS
@@ -415,19 +530,21 @@ div.test:nth-child(odd) {
 		.past {
 			margin:0;
 			padding:0;
-			border:2px solid grey;
+			border:3px solid black;
 			border-radius: 10px;
-			text-align: center;
+			// text-align: center;
 			width:45%;
 			padding:4%;
 			background:white;
 
 				h3 {
-				font-size: 1.5rem;
+				font-size: 2rem;
 				padding:0;
 				width:80%;
 				margin:8% auto;
 				margin-top:0;
+				text-align: center;
+				color:black;
 				}
 
 				p {
@@ -438,18 +555,21 @@ div.test:nth-child(odd) {
 					font-style: bold;
 					font-weight: 600;
 					font-size: 1.2rem;
-					color:pink;
-					margin-top:4%;
+					color:black;
+					font-family: 'Montserrat', sans-serif;
+					margin-bottom:3px;
 				}
 				.eventDate {
 					font-style: italic;
-					margin-bottom:.5rem;
+					color:pink;
+					margin-top: 30px;
+
 
 				}
 				.eventDesc {
-					margin-bottom: 2rem;
-					width:80%;
-					margin:0 auto;
+					// margin-bottom: 2rem;
+					// width:80%;
+					// margin:0 auto;
 				}
 				
 		}
@@ -462,15 +582,17 @@ div.test:nth-child(odd) {
 
 .columns {
 	// background: hotpink;
+
 	width:80%;
 	margin: 0 auto;
 	display:flex;
 	justify-content: space-between;
 	margin-bottom: 30px;
 	font-family: 'Montserrat', sans-serif;
-	margin-top: 40px;
+	// margin-top: 40px;
 	font-size: 1rem;
-	color:grey;
+	color:black;
+	margin-top: 80px;
 	
 		.one {
 			// background:palegreen;

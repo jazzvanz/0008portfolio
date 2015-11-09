@@ -5,7 +5,10 @@ ul.menu {
 	flex-wrap: wrap;
 	// justify-content: flex-end;
 	// width: 50%;
-	justify-content: space-between;
+	flex-direction: column;
+	margin-top: 20px;
+	// padding-top:10px;
+	// justify-content: space-between;
 
 	li {
 		display: inline;
@@ -13,11 +16,12 @@ ul.menu {
 		background:none;
 		font-family: 'Montserrat', sans-serif;
 		text-transform: uppercase;
+		padding:5px;
 		a {
 			color: #333;
 			padding: 10px;
 			background: #333;
-			color: black;
+			color: white;
 			background:none;
 			font-size:1.2rem;
 		}
