@@ -1,0 +1,137 @@
+// first media query/////////1120//////////////////////
+// @media all and (max-width: 1120px) {
+// splash page on top
+// 	.splash {
+// 		flex-direction: row;
+// 		.img {
+// 			max-width:200px;
+// 			max-height:200px;
+// 			justify-content: center;
+// 			margin: auto auto;
+// 		}
+
+// 		.textBlock {
+		
+// 		}
+// 	}
+// }
+
+// SECOND MEDIA QUERY AT 950 ///////////////////////////////////////////////
+
+@media all and (max-width: 950px) {
+		// splash page on top
+		.splash {
+			flex-direction: row;
+			// justify-content: center;
+			.headshot {
+				width: 100%;
+				margin: 30px auto;
+			}
+			.img {
+
+				max-width:400px;
+				max-height:400px;
+				justify-content: center;
+			}
+
+			.textBlock {
+				width:80%;
+				margin: 20px auto;
+
+				h1 {
+					// text-align: center;
+				}
+					.broadSkills {
+						// width:20%;
+						// background: palegreen;
+					}
+			}
+		}
+	}
+
+
+// coding hours 
+		.hoursPanel {
+			// margin: 30px auto;
+			.hoursP {
+				// width:900px;
+				// height:250px;
+				// flex-wrap: no-wrap;
+				// flex-direction:column;
+				// justify-content: space-around;
+			}
+			// width:900px;
+		}
+
+
+// 3rd phrase media query
+
+	@media all and (max-width: 800px) {
+	// reasons: the break in the hours panel must switch to two hours
+///// coding hours //////////////////////////////////////////////
+		.hoursPanel {
+			// margin: 30px auto;
+			width:100%;
+			.hoursP {
+				// width:600px;
+				justify-content: space-between;
+				align-items: space-between;
+					.workHours {
+						margin: 20px;
+					}
+
+			}
+			// width:900px;
+		}
+
+	}
+
+
+//media query for mobile 
+@media all and (max-width: 300px) {
+
+//calender time
+h3.calenderP {
+	margin:20px auto;
+}
+.calender {
+	flex-wrap: nowrap;
+	flex-direction:column;
+	width:100%;
+	margin-top:10px;
+	// margin-bottom: 20px;
+	// background: blue;
+		.upcoming {
+			width: 90%;
+			margin:10px auto;
+			// background: green;
+		}
+
+		.past {
+			width: 90%;
+			margin:10px auto;		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

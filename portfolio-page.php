@@ -55,12 +55,11 @@ get_header();  ?>
                 </div>
               </div>
           </div>
-
+        </div>
               <!-- pulling in hours worked  -->
           <h3 class="hoursCoded">Time spent coding:</h3>
-          </div>
               <div class="hoursPanel">
-               <div class="container">
+               <!-- <div class="container"> -->
                   <div class="hoursP">
                   <?php while ( has_sub_field("work_hours") ): ?>
                     <div class="workHours">
@@ -69,7 +68,7 @@ get_header();  ?>
                     </div> 
                   <?php endwhile; ?>
                   </div>
-                </div>
+                <!-- </div> -->
              </div>
          <div class="container">
 
