@@ -1,20 +1,26 @@
 // first media query/////////1120//////////////////////
-// @media all and (max-width: 1120px) {
-// splash page on top
-// 	.splash {
-// 		flex-direction: row;
-// 		.img {
-// 			max-width:200px;
-// 			max-height:200px;
-// 			justify-content: center;
-// 			margin: auto auto;
-// 		}
-
-// 		.textBlock {
-		
-// 		}
-// 	}
-// }
+@media all and (max-width: 1120px) {
+	.splash {
+		background:grey;
+		// flex-wrap:no-wrap;
+		flex-direction: column;
+			.img {
+				background:pink;
+				height: 50%;
+					img.headshot {
+					  max-width:400px;
+					  max-height:400px;
+			}
+		}
+		.textBlock {
+			height:50%;
+			margin:0 70px;
+				.introduction {
+					background: palegreen;
+			}
+		}
+	}
+}
 
 // SECOND MEDIA QUERY AT 950 ///////////////////////////////////////////////
 
@@ -47,12 +53,15 @@
 					}
 			}
 		}
-	}
+	
 
 
 // coding hours 
+		h3.hoursCoded {
+			margin-top: 100px;
+			background: grey;
+		}
 		.hoursPanel {
-			// margin: 30px auto;
 			.hoursP {
 				// width:900px;
 				// height:250px;
@@ -62,6 +71,7 @@
 			}
 			// width:900px;
 		}
+	}	
 
 
 // 3rd phrase media query
@@ -69,26 +79,35 @@
 	@media all and (max-width: 800px) {
 	// reasons: the break in the hours panel must switch to two hours
 ///// coding hours //////////////////////////////////////////////
-		.hoursPanel {
-			// margin: 30px auto;
-			width:100%;
+	.hoursPanel {
 			.hoursP {
-				// width:600px;
-				justify-content: space-between;
-				align-items: space-between;
+				width:500px;
+				// background:grey;
 					.workHours {
 						margin: 20px;
-					}
+
+				}
 
 			}
 			// width:900px;
 		}
-
 	}
 
-
 //media query for mobile 
-@media all and (max-width: 300px) {
+@media all and (max-width: 440px) {
+//at 440 must change the hours coded section
+
+		.hoursPanel {
+			.hoursP {
+				width:400px;
+					.workHours {
+						margin: 15px;
+						width: 120px;
+						height: 120px;
+				
+			}
+		}
+	}
 
 //calender time
 h3.calenderP {
@@ -116,9 +135,17 @@ h3.calenderP {
 
 
 
-
-
-
+@media all and (max-width: 300px) {
+	// .hoursPanel {
+	// 		.hoursP {
+	// 			width:500px;
+	// 				.workHours {
+	// 					margin: 20px;
+				
+	// 		}
+	// 	}
+	// }
+}
 
 
 
