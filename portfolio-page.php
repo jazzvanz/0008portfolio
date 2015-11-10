@@ -16,7 +16,8 @@ get_header();  ?>
                <?php endif; ?>
             </div>
                <!-- pulling in job title -->
-               <div class="textBlock">
+              <div class="textBlock">
+               <div class="topText">
                    <h2 class="jobTitle"><?php the_field("job_title"); ?></h2>
                    <!-- pulling in my name -->
 
@@ -24,10 +25,10 @@ get_header();  ?>
                    <!-- pulling in my introduction paragraph  -->
                    <h3 class="hi"><?php the_field("greeting"); ?></h3>
                    <p class="introduction"><?php the_field("introduction"); ?></p>
-
+                </div>
                     <!-- panel/broad skills section  -->
                     <!-- pulling in skills/repeater -->
-
+                <div class="move">
                     <div class="broadSkills">
                       <div class="broadSvg">
                         <!-- hardcoding the broad logos -->
@@ -53,9 +54,13 @@ get_header();  ?>
                        <p><?php the_sub_field("social_icons"); ?></p>
                    <?php endwhile; ?>
                 </div>
-              </div>
+
+             </div> 
+             <!-- //end of move div -->
           </div>
         </div>
+     </div> 
+     <!-- //contianer  -->
               <!-- pulling in hours worked  -->
           <h3 class="hoursCoded">Time spent coding:</h3>
               <div class="hoursPanel">
