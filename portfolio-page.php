@@ -178,9 +178,9 @@ get_header();  ?>
                 <?php endwhile; ?>
                 </div>
             </div>
-           </div>
-            <!-- </div> -->
           </div>
+         </div>
+     <!--    </div> -->
 
             <!-- //end of calender div -->
 
