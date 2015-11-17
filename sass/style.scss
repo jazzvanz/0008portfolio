@@ -57,20 +57,14 @@ body {
 //Header Styles:
 
 header {
-	// display: flex;
-	// flex-wrap: wrap;
-	// justify-content: flex-end;
-	// padding:12px;
-	// align-items: flex-end;
-	
 		.nav {
 			color:white;
  			width:300px;
  			height:300px;
-			// position:absolute;
 			position:fixed;
 			top:0;
 			left:0;
+			z-index: 99;
 			
 			* {
 				position: relative;
@@ -111,8 +105,8 @@ header {
 			align-items: center;
 					.headshot {
 						border-radius: 50%;
-						max-width: 400px;
-						max-height: 400px;
+						width: 400px;
+						height: 400px;
 						margin-left: 120px;
 						justify-content: center;
 						align-items: center;
@@ -153,9 +147,7 @@ header {
 					font-family: 'Montserrat', sans-serif;
 					margin-top: 10px;
 				}
-				// .move {
-				// 	display:hidden;
-				// }
+				
 
 	}
 	//end of textblock
@@ -324,7 +316,7 @@ h3.hoursCoded {
 
 // CSS FOR PORTFOLIO SECIION
 .portfolio {
-	max-width:80%;
+	width:80%;
 	margin:0 auto;
 		.full {
 			
@@ -631,7 +623,7 @@ h5.hardSubtitle {
 		}
 		.three {
 			// background:burlywood;
-			max-width:33.33%;
+			// max-width:33.33%;
 				p {
 					margin:0;
 					padding:0;
@@ -675,8 +667,6 @@ h5.hardSubtitle {
 			padding:10px;
 			border-radius: 9px;
 			margin:40px auto;
-			// text-align: center;
-			// padding:20px;
 		}
 		.wpcf7-text {
 			padding:10px;

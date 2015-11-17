@@ -168,7 +168,7 @@ get_header();  ?>
 
                 <!-- hardcoding past event titles -->
                 <div class="past">
-                <h3>Recently Past </h3>
+                <h3>Past</h3>
                 <!-- pulling in past events -->
               <?php while ( has_sub_field("past_events") ): ?>
                  <p class="eventDate"><?php the_sub_field("past_date"); ?></p>

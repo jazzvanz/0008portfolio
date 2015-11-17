@@ -49,7 +49,7 @@
 				// background:deeppink;
 				padding:0;
 				margin:0;
-				width:40%;
+				width:100%;
 				display:flex;
 				flex-wrap:wrap;
 				height:100%;
@@ -106,7 +106,7 @@
 // coding hours 
 		h3.hoursCoded {
 			margin-top: 100px;
-			background: grey;
+			// background: grey;
 		}
 		.hoursPanel {
 			.hoursP {
@@ -144,6 +144,7 @@
 @media all and (max-width: 440px) {
 //at 440 must change the hours coded section
 
+
 		.hoursPanel {
 			.hoursP {
 				width:400px;
@@ -155,7 +156,7 @@
 			}
 		}
 	}
-}	
+	
 
 //calender time
 h3.calenderP {
@@ -179,22 +180,204 @@ h3.calenderP {
 			margin:10px auto;
 		}
 	}
-
-
-
-
-@media all and (max-width: 300px) {
-	// .hoursPanel {
-	// 		.hoursP {
-	// 			width:500px;
-	// 				.workHours {
-	// 					margin: 20px;
-				
-	// 		}
-	// 	}
-	// }
 }
 
+
+
+
+
+@media all and (max-width: 375px) {
+	//head show image
+
+	.splash {
+		display:block;
+		.img {
+			// display:block;
+			margin-bottom: 0px;
+			.headshot {
+				width:250px;
+				height:250px;
+				// margin-top:300px;
+				margin-left: 100px;
+				margin-right:0;
+				margin-bottom: 0;
+			}
+		}
+
+		.textBlock {
+			display: block;
+			width:100%;
+			margin-top:0px;
+				.topText {
+					margin-top: 0px;
+					width:100%;
+					margin-left: 20px;
+				}
+				.jobTitle {
+					margin-top:0px;
+					}
+				}
+			}
+	//broad skills
+	.broadSkills {
+		display: block;
+		width:100%;
+			.broadSvg {
+				display: block;
+				width:100%;
+					.svg {
+						width: 100%;
+					}
+			}
+	}
+
+	.splash .textBlock .broadSkills {
+		display: none;
+	}
+	.splash .textBlock .move {
+		// display: block;
+		display:none;
+		width: 100%;
+	}
+
+	.splash .textBlock .move .socialIcons {
+		display: block;
+		width: 100%;
+	}
+
+//portfolio title
+.workText {
+	margin-bottom:30px;
+}
+
+	.hoursPanel {
+		margin-bottom:30px;
+			.hoursP {
+				width:500px;
+					.workHours {
+						margin: 20px;
+				
+			}
+		}
+	}
+
+	h3.hoursCoded {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+
+	.wpcf7 {
+
+		.wpcf7-form-control {
+			width:100%;
+			background:none;
+			border:none;
+			border-bottom:1px solid grey;
+			// z-index: -9999999;
+		}
+		.wpcf7-submit {
+				width:100%;
+				border: 2px solid black;
+				text-transform: uppercase;
+				color:pink;
+				// float: right;
+				padding:20px;
+				border-radius: 9px;
+				margin: 0px;
+					p {
+						margin-bottom: 0px;
+					}
+				
+			}
+		}
+		//end of contact changes 	
+
+	h3.connect {
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+
+	.columns {
+		width:100%;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin-left:40px;
+		margin-top: 20px;
+
+
+
+		.one {
+		width:100%;
+		margin:0px;
+		// align-self: center;
+			p {
+				width:100%;
+				margin:0px;
+				margin-bottom:3px;
+			}
+		}
+
+		.two {
+		width:100%;
+		// align-self: center;
+			p {
+				width:100%;
+				margin-bottom:3px;
+			}
+		}
+
+		.three {
+		width:100%;
+		// align-self: center;
+			p {
+				width:100%;
+				margin-bottom:3px;
+			}
+		}
+	}
+
+// start of hard skills 
+
+.hardSkills {
+	margin-top:10px;
+
+}
+
+.hardSkillsTwo {
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+
+// start of portfolio 
+.portfolio {
+	// width:100%;
+		.full {
+			.test {
+				margin-bottom: 30px;
+				display: block;
+				}
+				button {
+					width: 60%;
+					margin-bottom: 30px;
+				}
+			}
+		}
+div.test:nth-child(2n+0) {
+	.textWork {
+		margin-right: 15px;
+		margin-left: 15px;
+		}
+	}	
+div.test:nth-child(odd) {
+	.textWork {
+		margin-left:15px;
+		margin-right:15px;
+		}
+	}
+}
+//end of mobile size;
+		
 
 
 
