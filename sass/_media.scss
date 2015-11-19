@@ -188,19 +188,35 @@ h3.calenderP {
 
 @media all and (max-width: 375px) {
 	//head show image
+header {
+	.nav {
+		width:250px;
+		height:250px;
+
+		&:before {
+			background:black;
+		}
+	}
+}	
+
+ul.menu {
+	li {
+		a {
+			font-size: 1rem;
+			padding: 3px;
+		}
+	}
+}
 
 	.splash {
 		display:block;
 		.img {
-			// display:block;
-			margin-bottom: 0px;
+			margin:0px auto;
+			// margin-top:125px;
 			.headshot {
 				width:250px;
 				height:250px;
-				// margin-top:300px;
-				margin-left: 100px;
-				margin-right:0;
-				margin-bottom: 0;
+				// margin-left: 100px;
 			}
 		}
 
@@ -351,7 +367,7 @@ h3.calenderP {
 
 // start of portfolio 
 .portfolio {
-	// width:100%;
+	width:100%;
 		.full {
 			.test {
 				margin-bottom: 30px;
@@ -360,6 +376,10 @@ h3.calenderP {
 				button {
 					width: 60%;
 					margin-bottom: 30px;
+				}
+				.textWork {
+					width: 80%;
+					margin:0 auto;
 				}
 			}
 		}
