@@ -42,7 +42,7 @@ get_header();  ?>
                          </div>
                          <div class="person">
                             <img class="svg" src="<?php bloginfo('template_url') ?>/images/peopleperson.svg" alt="logo - geodesic dog">
-                            <h4>People Person</h4>
+                            <h4 class="animated fadeOutDownBig">People Person</h4>
                          </div>
                       </div> 
                         <!-- hardcoding the broad titles -->
@@ -67,7 +67,7 @@ get_header();  ?>
                <!-- <div class="container"> -->
                   <div class="hoursP">
                   <?php while ( has_sub_field("work_hours") ): ?>
-                    <div class="workHours">
+                    <div class="workHours" class="animated infinite pulse">
                       <p class="skill"><?php the_sub_field("skill"); ?></p>
                       <p class="hours"><?php the_sub_field("hours"); ?></p>
                     </div> 
