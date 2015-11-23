@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href='http://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  <link rel="stylesheet" href="sass/animate.min.css">
+ <!--  <link rel="stylesheet" href="sass/animate.min.css"> -->
   
   <?php wp_head(); ?>
 </head>

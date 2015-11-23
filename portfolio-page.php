@@ -67,7 +67,7 @@ get_header();  ?>
                <!-- <div class="container"> -->
                   <div class="hoursP">
                   <?php while ( has_sub_field("work_hours") ): ?>
-                    <div class="workHours" class="animated infinite pulse">
+                    <div class="workHours animated infinite pulse">
                       <p class="skill"><?php the_sub_field("skill"); ?></p>
                       <p class="hours"><?php the_sub_field("hours"); ?></p>
                     </div> 
@@ -136,13 +136,13 @@ get_header();  ?>
 
         <div id="skills" class="hardSkills">
           <?php while(has_sub_field("hard_skills")): ?>
-               <i class="devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
+               <i class="animated infinite pulse devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
           <?php endwhile; ?>
         </div>
 
          <div class="hardSkillsTwo">
           <?php while(has_sub_field("hard_skills_two")): ?>
-               <i class="devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
+               <i class="animated infinite pulse devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
           <?php endwhile; ?>
         </div>
       </div>
