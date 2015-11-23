@@ -6,11 +6,6 @@
   </div>
 </footer>
 
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/wow.js"></script>
- <script> new WOW().init(); </script>
-
 <script>
 /* Google Analytics! */
  var _gaq=[["_setAccount","UA-69911240-1"],["_trackPageview"]]; // Change UA-XXXXX-X to be your site's ID

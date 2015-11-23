@@ -56,6 +56,14 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+    'wow.js', //handle
+    get_template_directory_uri() . '/js/test.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
     false, //dependencies
@@ -66,7 +74,7 @@ function hackeryou_scripts() {
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
-    array( 'jquery', 'plugins' ), //dependencies
+    array( 'jquery', 'plugins', 'wow.js' ), //dependencies
     null, // version number
     true //load in footer
   );
