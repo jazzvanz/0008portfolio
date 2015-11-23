@@ -42,7 +42,7 @@ get_header();  ?>
                          </div>
                          <div class="person">
                             <img class="svg" src="<?php bloginfo('template_url') ?>/images/peopleperson.svg" alt="logo - geodesic dog">
-                            <h4 class="animated fadeOutDownBig">People Person</h4>
+                            <h4>People Person</h4>
                          </div>
                       </div> 
                         <!-- hardcoding the broad titles -->
@@ -67,7 +67,7 @@ get_header();  ?>
                <!-- <div class="container"> -->
                   <div class="hoursP">
                   <?php while ( has_sub_field("work_hours") ): ?>
-                    <div class="workHours animated infinite pulse">
+                    <div class="wow pulse workHours" data-wow-iteration="2">
                       <p class="skill"><?php the_sub_field("skill"); ?></p>
                       <p class="hours"><?php the_sub_field("hours"); ?></p>
                     </div> 
@@ -136,13 +136,13 @@ get_header();  ?>
 
         <div id="skills" class="hardSkills">
           <?php while(has_sub_field("hard_skills")): ?>
-               <i class="animated infinite pulse devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
+               <i class="wow pulse devicons devicons-<?php the_sub_field("hardskills_icons"); ?>" data-wow-iteration="2" ></i>
           <?php endwhile; ?>
         </div>
 
          <div class="hardSkillsTwo">
           <?php while(has_sub_field("hard_skills_two")): ?>
-               <i class="animated infinite pulse devicons devicons-<?php the_sub_field("hardskills_icons"); ?>"></i>
+               <i class="wow pulse devicons devicons-<?php the_sub_field("hardskills_icons"); ?>" data-wow-iteration="2" ></i>
           <?php endwhile; ?>
         </div>
       </div>
